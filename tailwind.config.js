@@ -5,6 +5,9 @@ module.exports = {
   mode: "jit",
   theme: {
     extend: {},
+    container: {
+      center: true
+    },
     colors: {
       red: "#E63946",
       beige: "#F1FAEE",
