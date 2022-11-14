@@ -1,0 +1,61 @@
+.landing {
+    height: 100vh;
+    padding: calc-padding(14) 0;
+
+    .row {
+        @include grid-columns(2);
+        align-items: center;
+        gap: 2rem;
+
+        @include breakpoint(tablet) {
+            @include grid-columns(1);
+            align-content: center;
+            grid-area: 2.4rem;
+        }
+    }
+
+    &__intro {
+        @include breakpoint(tablet) {
+            text-align: center;
+        }
+
+        &__desc-first {
+            text-transform: capitalize;
+            font-size: 2.6rem;
+        }
+
+        &__title {
+            margin-block: 1rem;
+            text-transform: capitalize;
+            font-size: 3rem;
+        }
+
+        &__desc-second {
+            font-size: 1.7rem;
+        }
+    }
+
+    &__pic {
+        width: 100%;
+        height: 40rem;
+
+        @include breakpoint(tablet) {
+            margin-inline: auto;
+            @include flex-center-row;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+
+            @include breakpoint(tablet) {
+                width: 70%;
+                @include flex-center-row;
+            }
+
+            @include breakpoint(mobile) {
+                width: 100%;
+            }
+        }
+    }
+}

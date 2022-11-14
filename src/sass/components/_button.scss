@@ -1,0 +1,23 @@
+.main-btn {
+    width: 60%;
+    text-align: center;
+    display: block;
+    margin-block: 2rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.6rem;
+    text-transform: capitalize;
+    font-size: 1.6rem;
+    cursor: pointer;
+    @include coloring(custom-white, txt);
+    @include coloring(dark-blue, bg);
+    @include transition-ease-in-out(background-color, 0.3);
+
+    @include breakpoint(tablet) {
+        margin-inline: auto;
+    }
+
+    &:hover {
+        background-color: lighten(map-get($colors, "dark-blue"), 10%);
+    }
+}

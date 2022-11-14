@@ -31,6 +31,7 @@
         position: relative;
         @include flex-between-row;
         gap: 2rem;
+        @include coloring(custom-white, bg);
 
         @include breakpoint(tablet) {
             --main-width: 60%;
