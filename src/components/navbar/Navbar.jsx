@@ -12,7 +12,10 @@ const Navbar = () => {
 
     const handleToggle = () => setToggle(!toggle);
 
-    const handleClickListItem = () => setToggle(false);
+    const handleClickListItem = () => {
+        window.scrollTo(0, 0);
+        setToggle(false);
+    }
 
     return (
         <nav className="navbar" id="navbar">
