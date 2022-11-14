@@ -78,6 +78,17 @@
     }
 
     &__toggler {
-        display: none;
+        width: 2.7rem;
+        height: 1.8rem;
+        @include flex-between-column;
+        cursor: pointer;
+
+        span {
+            width: 100%;
+            height: 0.3rem;
+            border-radius: 2rem;
+            @include coloring(dark-blue, bg);
+            // display: none;
+        }
     }
 }

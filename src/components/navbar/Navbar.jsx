@@ -1,32 +1,23 @@
+import { Link } from "react-router-dom";
+import NavbarDataItems from "../../data/NavbarDataItems";
+
 const Navbar = () => {
     return (
         <nav className="navbar" id="navbar">
             <div className="container">
                 <div className="row">
                     <h1 className="navbar__logo">
-                        <a href="/" className="navbar__logo__link">brand cloud</a>
+                        <Link to="/" className="navbar__logo__link">brand cloud</Link>
                     </h1>
 
                     <ul className="navbar__list">
-                        <li className="navbar__list__item">
-                            <a href="/" className="navbar__list__item__link">home</a>
-                        </li>
-
-                        <li className="navbar__list__item">
-                            <a href="/" className="navbar__list__item__link">about</a>
-                        </li>
-
-                        <li className="navbar__list__item">
-                            <a href="/" className="navbar__list__item__link">support</a>
-                        </li>
-
-                        <li className="navbar__list__item">
-                            <a href="/" className="navbar__list__item__link">platforms</a>
-                        </li>
-
-                        <li className="navbar__list__item">
-                            <a href="/" className="navbar__list__item__link">pricing</a>
-                        </li>
+                        {
+                            NavbarDataItems.map(({ id, linkText, url }) => (
+                                <li key={id} className="navbar__list__item">
+                                    <Link to={url} className="navbar__list__item__link">{linkText}</Link>
+                                </li>
+                            ))
+                        }
                     </ul>
 
                     <div className="navbar__toggler">
