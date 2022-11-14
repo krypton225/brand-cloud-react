@@ -3,27 +3,29 @@ const Navbar = () => {
         <nav className="navbar" id="navbar">
             <div className="container">
                 <div className="row">
-                    <h1 className="navbar__logo">brand cloud</h1>
+                    <h1 className="navbar__logo">
+                        <a href="/" className="navbar__logo__link">brand cloud</a>
+                    </h1>
 
                     <ul className="navbar__list">
                         <li className="navbar__list__item">
-                            <a href="/">home</a>
+                            <a href="/" className="navbar__list__item__link">home</a>
                         </li>
 
                         <li className="navbar__list__item">
-                            <a href="/">about</a>
+                            <a href="/" className="navbar__list__item__link">about</a>
                         </li>
 
                         <li className="navbar__list__item">
-                            <a href="/">support</a>
+                            <a href="/" className="navbar__list__item__link">support</a>
                         </li>
 
                         <li className="navbar__list__item">
-                            <a href="/">platforms</a>
+                            <a href="/" className="navbar__list__item__link">platforms</a>
                         </li>
 
                         <li className="navbar__list__item">
-                            <a href="/">pricing</a>
+                            <a href="/" className="navbar__list__item__link">pricing</a>
                         </li>
                     </ul>
 

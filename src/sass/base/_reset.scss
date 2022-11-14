@@ -13,13 +13,13 @@ html {
 }
 
 ::-moz-selection {
-    background-color: map-get($colors, "dark-blue");
-    color: map-get($colors, "beige");
+    @include coloring(dark-blue, "bg");
+    @include coloring(beige-color, "txt");
 }
 
 ::selection {
-    background-color: map-get($colors, "dark-blue");
-    color: map-get($colors, "beige");
+    @include coloring(dark-blue, "bg");
+    @include coloring(beige-color, "txt");
 }
 
 body {
@@ -38,7 +38,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: map-get($colors, "dark-blue");
+    @include coloring(dark-blue, "bg");
 }
 
 body::-webkit-scrollbar-track-piece {
