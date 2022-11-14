@@ -1,4 +1,8 @@
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
 import LandingImage from "../../assets/images/cyber-bg.png";
+
 import MainButton from "../button/MainButton";
 
 const Landing = () => {
@@ -15,7 +19,7 @@ const Landing = () => {
                     </div>
 
                     <div className="landing__pic">
-                        <img src={LandingImage} alt="Landing Cyber Background" draggable="false" />
+                        <LazyLoadImage src={LandingImage} alt="Landing Cyber Background" draggable="false" effect="blur" />
                     </div>
                 </div>
             </div>
