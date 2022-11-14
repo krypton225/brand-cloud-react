@@ -1,8 +1,12 @@
 .navbar {
     width: 100%;
-    position: relative;
     padding: calc($padding-y + 0.7rem) $padding-x;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
     @include main-box-shadow;
+    @include coloring(custom-white, bg);
 
     .row {
         width: 100%;
@@ -14,6 +18,10 @@
         font-size: 2.4rem;
         font-weight: 500;
 
+        @include breakpoint(tablet) {
+            font-size: 2rem;
+        }
+
         &__link {
             @include coloring(dark-blue, txt);
         }
@@ -24,6 +32,37 @@
         @include flex-between-row;
         gap: 2rem;
 
+        @include breakpoint(tablet) {
+            --main-width: 60%;
+            width: var(--main-width);
+            padding: calc($padding-y + 0.7rem) 0;
+            position: absolute;
+            top: calc($padding-y * 8);
+            left: calc((100% - var(--main-width)) / 2);
+            border-radius: 1.3rem;
+            @include flex-between-column;
+            @include main-box-shadow;
+            @include fade(hide);
+            @include transition-ease-in(all, 0.4);
+            transform: scale(0);
+            transform-origin: top right;
+            z-index: 99999;
+
+            &.active {
+                @include fade(show);
+                transform: scale(1);
+            }
+        }
+
+        @include breakpoint(mobile) {
+            --main-width-2: 90%;
+            width: var(--main-width-2);
+            padding: calc($padding-y + 0.3rem) 0;
+            position: absolute;
+            top: calc($padding-y * 7);
+            left: calc((100% - var(--main-width-2)) / 2);
+        }
+
         &__item {
             position: relative;
             padding: 0.8rem 0;
@@ -31,6 +70,13 @@
             border-radius: 0.7rem;
             overflow: hidden;
             @include transition-ease-in(color, 0.2);
+
+            @include breakpoint(tablet) {
+                width: 70%;
+                border-radius: 0.4rem;
+                padding: 0.5rem 1.5rem;
+                text-align: center;
+            }
 
             &:before {
                 content: "";
@@ -44,6 +90,10 @@
                 transform-origin: top left;
                 @include coloring(dark-blue, bg);
                 @include transition-ease-in(transform, 0.2);
+
+                @include breakpoint(tablet) {
+                    border-radius: 0.4rem;
+                }
             }
 
             &:nth-child(even)::before {
@@ -69,6 +119,11 @@
                 letter-spacing: 0.1rem;
                 @include coloring(dark-blue, txt);
                 @include transition-ease-in(color, 0.25);
+
+                @include breakpoint(tablet) {
+                    width: 100% !important;
+                    display: block;
+                }
             }
 
             &:hover &__link {
@@ -78,17 +133,38 @@
     }
 
     &__toggler {
-        width: 2.7rem;
-        height: 1.8rem;
+        width: 5rem;
+        height: 4.5rem;
+        padding: $padding-all;
         @include flex-between-column;
         cursor: pointer;
+        display: none;
+
+        @include breakpoint(tablet) {
+            display: inline-flex;
+        }
 
         span {
             width: 100%;
             height: 0.3rem;
             border-radius: 2rem;
             @include coloring(dark-blue, bg);
-            // display: none;
+            @include transition-ease-in(all, 0.3);
+        }
+
+        &.active {
+            span:nth-child(1) {
+                transform: rotate(-45deg) translateY(1.1rem);
+            }
+
+            span:nth-child(2) {
+                @include fade(hide);
+                transform: translateX(-0.5rem);
+            }
+
+            span:nth-child(3) {
+                transform: rotate(45deg) translateY(-1.1rem);
+            }
         }
     }
 }
