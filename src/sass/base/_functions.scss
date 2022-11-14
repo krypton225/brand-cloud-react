@@ -1,0 +1,3 @@
+@function calc-padding($value) {
+    @return $main-font-size * $value;
+}

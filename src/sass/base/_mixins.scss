@@ -1,0 +1,189 @@
+@mixin flex-center-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+@mixin flex-center-column {
+    @include flex-center-row;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+@mixin flex-start-column {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+@mixin flex-end-column {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+
+@mixin flex-between-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+@mixin flex-around-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+@mixin flex-evenly-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+@mixin flex-between-column {
+    @include flex-between-row;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+@mixin flex-around-column {
+    @include flex-around-row;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+@mixin flex-evenly-column {
+    @include flex-evenly-row;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+@mixin grid-columns($columns-number) {
+    display: grid;
+    grid-template-columns: repeat($columns-number, 1fr);
+}
+
+@mixin grid-center() {
+    display: grid;
+    place-items: center;
+}
+
+@mixin hero-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+@mixin reset-bg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin fade($type) {
+    @if $type == "hide" {
+        visibility: hidden;
+        opacity: 0;
+    } @else if $type == "show" {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@mixin transition-ease($prop, $time) {
+    -webkit-transition: $prop #{$time}s ease;
+    -o-transition: $prop #{$time}s ease;
+    transition: $prop #{$time}s ease;
+}
+
+@mixin transition-ease-in($prop, $time) {
+    -webkit-transition: $prop #{$time}s ease-in;
+    -o-transition: $prop #{$time}s ease-in;
+    transition: $prop #{$time}s ease-in;
+}
+
+@mixin transition-ease-out($prop, $time) {
+    -webkit-transition: $prop #{$time}s ease-out;
+    -o-transition: $prop #{$time}s ease-out;
+    transition: $prop #{$time}s ease-out;
+}
+
+@mixin transition-ease-in-out($prop, $time) {
+    -webkit-transition: $prop #{$time}s ease-in-out;
+    -o-transition: $prop #{$time}s ease-in-out;
+    transition: $prop #{$time}s ease-in-out;
+}
+
+@mixin breakpoint($point) {
+    @if $point == tablet {
+        @media only screen and (max-width: 992px) {
+            @content;
+        }
+    }
+
+    @if $point == mobile {
+        @media only screen and (max-width: 576px) {
+            @content;
+        }
+    }
+
+    @if $point == large {
+        @media only screen and (max-width: 1200px) {
+            @content;
+        }
+    }
+}
