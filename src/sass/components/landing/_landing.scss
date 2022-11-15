@@ -1,6 +1,6 @@
 .landing {
     height: 100vh;
-    padding: calc-padding(10.7) 0;
+    padding: calc-padding(12.5) 0;
     overflow: hidden;
 
     .row {
@@ -52,12 +52,12 @@
             margin-inline: auto;
 
             @include breakpoint(tablet) {
-                width: 70%;
+                width: 65%;
                 @include flex-center-row;
             }
 
             @include breakpoint(mobile) {
-                width: 100%;
+                width: 90%;
             }
         }
     }
