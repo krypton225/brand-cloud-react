@@ -1,0 +1,25 @@
+.go-to-top {
+    width: 4rem;
+    height: 4rem;
+    @include flex-center-row;
+    border: none;
+    border-radius: 50%;
+    position: fixed;
+    right: 2%;
+    bottom: 5%;
+    font-size: 1.4rem;
+    cursor: pointer;
+    @include fade(hide);
+    @include coloring(dark-blue, bg);
+    @include coloring(custom-white, txt);
+    @include transition-ease-in-out(all, 0.4);
+
+    &.active {
+        right: 5%;
+        @include fade(show);
+    }
+
+    &:hover {
+        background-color: lighten(map-get($colors, "dark-blue"), 10%);
+    }
+}

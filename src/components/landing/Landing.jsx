@@ -5,10 +5,13 @@ import LandingImage from "../../assets/images/cyber-bg.png";
 import About from "../about/About";
 
 import MainButton from "../button/MainButton";
+import GoToTop from "../go-to-top/GoToTop";
 
 const Landing = () => {
     return (
         <>
+            <GoToTop />
+
             <section className='landing'>
                 <div className="container">
                     <div className="row">
