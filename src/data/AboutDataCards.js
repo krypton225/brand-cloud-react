@@ -3,15 +3,18 @@ import GenerateIDs, { insertIDIntoData } from "./GenerateIDs";
 const AboutDataCards = [
     {
         itemNum: "100%",
-        itemName: "completion"
+        itemName: "completion",
+        animateItem: "fade-right"
     },
     {
         itemNum: "24 / 7",
-        itemName: "delivery"
+        itemName: "delivery",
+        animateItem: "zoom-in"
     },
     {
         itemNum: "100k",
-        itemName: "transactions"
+        itemName: "transactions",
+        animateItem: "fade-left"
     },
 ];
 

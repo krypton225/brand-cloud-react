@@ -1,6 +1,7 @@
 .landing {
     height: 100vh;
-    padding: calc-padding(14) 0;
+    padding: calc-padding(10.7) 0;
+    overflow: hidden;
 
     .row {
         @include grid-columns(2);
@@ -37,9 +38,10 @@
 
     &__pic {
         width: 100%;
-        height: 40rem;
+        height: 100%;
 
         @include breakpoint(tablet) {
+            height: 100%;
             margin-inline: auto;
             @include flex-center-row;
         }

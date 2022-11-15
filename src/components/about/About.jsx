@@ -1,6 +1,19 @@
+import { useEffect } from "react";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import AboutDataCards from '../../data/AboutDataCards';
 
 const About = () => {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1200,
+        });
+        AOS.refresh();
+    }, []);
+
     return (
         <section className='about' id='about'>
             <div className="container">
@@ -13,8 +26,8 @@ const About = () => {
 
                     <div className="about__cards">
                         {
-                            AboutDataCards.map(({ id, itemNum, itemName }) => (
-                                <div key={id} className="about__cards__item">
+                            AboutDataCards.map(({ id, itemNum, itemName, animateItem }) => (
+                                <div key={id} className="about__cards__item" data-aos={animateItem}>
                                     <h3 className="about__cards__item__num">{itemNum}</h3>
                                     <p className="about__cards__item__name">{itemName}</p>
                                 </div>

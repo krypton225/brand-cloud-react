@@ -12,7 +12,7 @@ const Landing = () => {
             <section className='landing'>
                 <div className="container">
                     <div className="row">
-                        <div className="landing__intro">
+                        <div className="landing__intro" data-aos="fade-left">
                             <p className="landing__intro__desc-first">unique sequencing & production</p>
                             <h2 className="landing__intro__title">cloud management</h2>
                             <p className="landing__intro__desc-second">This is our tech brand</p>
