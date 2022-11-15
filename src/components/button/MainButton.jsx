@@ -1,11 +1,11 @@
-import React from 'react'
+import { Link } from 'react-router-dom'
 
 const MainButton = ({ text, url }) => {
     return (
         <>
-            <a href={url} className='main-btn'>{text}</a>
+            <Link to={url} className='main-btn'>{text}</Link>
         </>
     )
 }
 
-export default MainButton
+export default MainButton;
