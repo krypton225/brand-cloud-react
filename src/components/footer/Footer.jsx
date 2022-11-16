@@ -1,5 +1,6 @@
-import Copyright from "./Copyright"
+import FooterColumnTitle from "./FooterColumnTitle"
 import FormFooter from "./FormFooter"
+import Copyright from "./Copyright"
 
 const Footer = () => {
     return (
@@ -7,7 +8,7 @@ const Footer = () => {
             <div className="container">
                 <div className="row">
                     <div className="footer__col">
-                        <h5 className="footer__col__title">solutions</h5>
+                        <FooterColumnTitle text={`solutions`} isUpper={false} />
 
                         <ul className="footer__col__list">
                             <li className="footer__col__list__item">
@@ -33,7 +34,7 @@ const Footer = () => {
                     </div>
 
                     <div className="footer__col">
-                        <h5 className="footer__col__title">support</h5>
+                        <FooterColumnTitle text={`support`} isUpper={false} />
 
                         <ul className="footer__col__list">
                             <li className="footer__col__list__item">
@@ -59,7 +60,7 @@ const Footer = () => {
                     </div>
 
                     <div className="footer__col">
-                        <h5 className="footer__col__title">company</h5>
+                        <FooterColumnTitle text={`company`} isUpper={false} />
 
                         <ul className="footer__col__list">
                             <li className="footer__col__list__item">
@@ -85,7 +86,7 @@ const Footer = () => {
                     </div>
 
                     <div className="footer__col">
-                        <h5 className="footer__col__title">legal</h5>
+                        <FooterColumnTitle text={`legal`} isUpper={false} />
 
                         <ul className="footer__col__list">
                             <li className="footer__col__list__item">
@@ -111,7 +112,7 @@ const Footer = () => {
                     </div>
 
                     <div className="footer__col">
-                        <h5 className="footer__col__title-upper">subscribe for newsletter</h5>
+                        <FooterColumnTitle text={`subscribe for newsletter`} isUpper={true} />
 
                         <p className="footer__col__desc">
                             The latest news, articles and resources, sent to your inbox weekly.
