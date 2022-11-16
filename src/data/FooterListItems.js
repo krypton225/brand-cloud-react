@@ -1,6 +1,6 @@
 import GenerateIDs, { insertIDIntoData } from "./GenerateIDs";
 
-export const ListItemSolutions = [
+const ListItemSolutions = [
     { itemText: "marketing" },
     { itemText: "analytics" },
     { itemText: "commerce" },
@@ -8,7 +8,7 @@ export const ListItemSolutions = [
     { itemText: "cloud" },
 ];
 
-export const ListItemSupport = [
+const ListItemSupport = [
     { itemText: "pricing" },
     { itemText: "documentation" },
     { itemText: "guides" },
@@ -16,7 +16,7 @@ export const ListItemSupport = [
     { itemText: "fixes" },
 ];
 
-export const ListItemCompany = [
+const ListItemCompany = [
     { itemText: "about" },
     { itemText: "blog" },
     { itemText: "jobs" },
@@ -24,7 +24,7 @@ export const ListItemCompany = [
     { itemText: "partners" },
 ];
 
-export const ListItemLegal = [
+const ListItemLegal = [
     { itemText: "chain" },
     { itemText: "private" },
     { itemText: "public" },
@@ -38,3 +38,5 @@ export const ListItemLegal = [
     insertIDIntoData(GenerateIDs, ListItemCompany);
     insertIDIntoData(GenerateIDs, ListItemLegal);
 })();
+
+export const MyItemsArray = [ListItemSolutions, ListItemCompany, ListItemSupport, ListItemLegal];

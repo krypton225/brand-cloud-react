@@ -2,32 +2,21 @@ import FooterColumnTitle from "./FooterColumnTitle"
 import FormFooter from "./FormFooter"
 import Copyright from "./Copyright"
 import FormColumnList from "./FormColumnList"
-import { ListItemSolutions, ListItemSupport, ListItemCompany, ListItemLegal } from "../../data/FooterListItems"
+import { MyItemsArray } from "../../data/FooterListItems"
 
 const Footer = () => {
     return (
         <footer className='footer' id='footer'>
             <div className="container">
                 <div className="row">
-                    <div className="footer__col">
-                        <FooterColumnTitle text={`solutions`} isUpper={false} />
-                        <FormColumnList list={ListItemSolutions} />
-                    </div>
-
-                    <div className="footer__col">
-                        <FooterColumnTitle text={`support`} isUpper={false} />
-                        <FormColumnList list={ListItemSupport} />
-                    </div>
-
-                    <div className="footer__col">
-                        <FooterColumnTitle text={`company`} isUpper={false} />
-                        <FormColumnList list={ListItemCompany} />
-                    </div>
-
-                    <div className="footer__col">
-                        <FooterColumnTitle text={`legal`} isUpper={false} />
-                        <FormColumnList list={ListItemLegal} />
-                    </div>
+                    {
+                        MyItemsArray.map((col, index) => (
+                            <div className="footer__col" key={index}>
+                                <FooterColumnTitle text={`solutions`} isUpper={false} />
+                                <FormColumnList list={col} />
+                            </div>
+                        ))
+                    }
 
                     <div className="footer__col">
                         <FooterColumnTitle text={`subscribe for newsletter`} isUpper={true} />

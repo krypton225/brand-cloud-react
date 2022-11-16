@@ -1,10 +1,12 @@
 import FormColumnListItem from "./FormColumnListItem";
 
-const FormColumnList = ({ list = [] }) => {
+const FormColumnList = ({ list }) => {
+    let listed = Array.from(list);
+
     return (
         <ul className="footer__col__list">
             {
-                list.map(({ id, itemText }) => (
+                listed.map(({ id, itemText }) => (
                     <FormColumnListItem itemText={itemText} key={id} />
                 ))
             }
