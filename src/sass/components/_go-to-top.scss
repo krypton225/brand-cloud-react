@@ -5,7 +5,7 @@
     border: none;
     border-radius: 50%;
     position: fixed;
-    right: 2%;
+    right: 1%;
     bottom: 5%;
     font-size: 1.4rem;
     cursor: pointer;
@@ -13,6 +13,7 @@
     @include coloring(dark-blue, bg);
     @include coloring(custom-white, txt);
     @include transition-ease-in-out(all, 0.4);
+    z-index: 999999;
 
     &.active {
         right: 5%;

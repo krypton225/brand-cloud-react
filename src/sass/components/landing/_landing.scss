@@ -1,7 +1,5 @@
 .landing {
-    height: 100vh;
-    padding: calc-padding(12.5) 0;
-    overflow: hidden;
+    padding: calc-padding(12.5) 0 calc-padding(6);
 
     .row {
         @include grid-columns(2);

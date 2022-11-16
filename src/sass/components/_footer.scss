@@ -1,0 +1,135 @@
+.footer {
+    width: 100vw;
+    position: relative;
+    top: 5rem;
+    padding: calc-padding(6) 0 0;
+    @include coloring(darker-blue, bg);
+    @include coloring(custom-white, txt);
+
+    .row {
+        width: 100%;
+        @include grid-columns(5);
+        gap: 1.6rem;
+
+        @include breakpoint(tablet) {
+            @include grid-columns(2);
+            gap: 2.3rem;
+        }
+
+        @include breakpoint(mobile) {
+            @include grid-columns(1);
+        }
+    }
+
+    &__col {
+        width: 100%;
+        @include grid-columns(1);
+        place-items: flex-start;
+        gap: 0.5rem;
+
+        &__title {
+            font-size: 1.6rem;
+            font-weight: 400;
+            text-transform: capitalize;
+
+            &-upper {
+                font-size: 1.5rem;
+                font-weight: 400;
+                text-transform: uppercase;
+            }
+        }
+
+        &__list {
+            margin-block: 1.1rem;
+
+            &__item {
+                text-transform: capitalize;
+
+                &__link {
+                    display: block;
+                    padding: calc-padding(0.7) 0;
+                    font-size: 1.2rem;
+                    @include coloring(custom-white, txt);
+                    @include transition-ease-in(color, 0.3);
+
+                    &:hover {
+                        color: darken(map-get($colors, "custom-white"), 40%);
+                    }
+                }
+            }
+        }
+
+        &__desc {
+            font-size: 1.2rem;
+
+            @include breakpoint(mobile) {
+                margin-block: 1.4rem;
+            }
+        }
+
+        &__form {
+            width: 100%;
+            @include flex-between-row;
+
+            &__container {
+                --custom-border-radius: 0.4rem;
+                width: 100%;
+                height: 3.5rem;
+                padding: 0;
+                border-radius: var(--custom-border-radius);
+                position: relative;
+                background-color: cadetblue;
+
+                @include breakpoint(mobile) {
+                    width: 60%;
+                }
+
+                &__email {
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    padding: 0 0 0 0.6rem;
+                    border: none;
+                    border-radius: var(--custom-border-radius);
+                    caret-color: map-get($colors, "green-light");
+
+                    &::placeholder {
+                        text-transform: capitalize;
+                        color: rgb(177, 177, 177);
+                    }
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                &__submit {
+                    height: 100%;
+                    padding: 0 calc-padding(1);
+                    position: absolute;
+                    right: -17%;
+                    top: 0;
+                    border: none;
+                    border-radius: 0 var(--custom-border-radius) var(--custom-border-radius) 0;
+                    text-transform: capitalize;
+                    cursor: pointer;
+                    background-color: darken(map-get($colors, "green-light"), 40%);
+                    color: lighten(map-get($colors, "custom-white"), 40%);
+                    @include transition-ease-in-out(background-color, 0.3);
+
+                    &:hover {
+                        background-color: darken(map-get($colors, "green-light"), 50%);
+                    }
+                }
+            }
+        }
+    }
+
+    &__copyright {
+        padding: calc-padding(1.5) 0;
+        margin-top: 1.7rem;
+        text-align: center;
+        font-size: 1.4rem;
+        background-color: darken(map-get($colors, "dark-blue"), 9%);
+    }
+}
