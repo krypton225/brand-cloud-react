@@ -1,3 +1,5 @@
+import Copyright from "./Copyright"
+
 const Footer = () => {
     return (
         <footer className='footer' id='footer'>
@@ -124,11 +126,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className="footer__copyright">
-                <p className="footer__copyright__text">
-                    &copy; 2022 Khaled Mohamed. All rights reserved.
-                </p>
-            </div>
+            <Copyright text={`2022 Khaled Mohamed. All rights reserved.`} />
         </footer>
     )
 }
