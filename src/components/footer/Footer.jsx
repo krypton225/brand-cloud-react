@@ -1,4 +1,5 @@
 import Copyright from "./Copyright"
+import FormFooter from "./FormFooter"
 
 const Footer = () => {
     return (
@@ -116,12 +117,7 @@ const Footer = () => {
                             The latest news, articles and resources, sent to your inbox weekly.
                         </p>
 
-                        <form className="footer__col__form" autoComplete='off'>
-                            <div className='footer__col__form__container'>
-                                <input type="email" name="email" className="footer__col__form__container__email" placeholder='enter your email' autoComplete="new-password" />
-                                <input type="submit" className='footer__col__form__container__submit' value="subscribe" />
-                            </div>
-                        </form>
+                        <FormFooter />
                     </div>
                 </div>
             </div>

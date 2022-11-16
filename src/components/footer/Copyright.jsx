@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Copyright = ({ text }) => {
     return (
         <div className="footer__copyright">
@@ -8,4 +6,4 @@ const Copyright = ({ text }) => {
     )
 }
 
-export default Copyright
+export default Copyright;
