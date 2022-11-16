@@ -41,6 +41,7 @@
 
         @include breakpoint(mobile) {
             @include grid-columns(1);
+            gap: 2.3rem;
         }
 
         &__card {

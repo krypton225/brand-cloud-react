@@ -1,10 +1,10 @@
-import AOS from "aos";
-import "aos/dist/aos.css";
 import { useEffect } from "react";
 
-import { BsCheck2 } from "react-icons/bs";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import PlatformsCards from "../../data/PlatformsCards";
+import SupportCard from "../support/SupportCard";
 
 const Platforms = () => {
     useEffect(() => {
@@ -28,13 +28,7 @@ const Platforms = () => {
                             <div className="platforms__cols" key={index}>
                                 {
                                     oneRow.map(({ id, cardTitle, cardDesc }) => (
-                                        <div className="platforms__cols__card" key={id} data-aos="zoom-in">
-                                            <h4 className="platforms__cols__card__title">
-                                                <BsCheck2 className="platforms__cols__card__title__icon" />
-                                                <span className="platforms__cols__card__title__txt">{cardTitle}</span>
-                                            </h4>
-                                            <p className="platforms__cols__card__desc">{cardDesc}</p>
-                                        </div>
+                                        <SupportCard key={id} cardTitle={cardTitle} cardDesc={cardDesc} animationName={"zoom-in"} />
                                     ))
                                 }
                             </div>
