@@ -20,27 +20,23 @@ const Landing = () => {
     }, []);
 
     return (
-        <>
-            <GoToTop />
+        <section className='landing'>
+            <div className="container">
+                <div className="row">
+                    <div className="landing__intro" data-aos="fade-left">
+                        <p className="landing__intro__desc-first">unique sequencing & production</p>
+                        <h2 className="landing__intro__title">cloud management</h2>
+                        <p className="landing__intro__desc-second">This is our tech brand</p>
 
-            <section className='landing'>
-                <div className="container">
-                    <div className="row">
-                        <div className="landing__intro" data-aos="fade-left">
-                            <p className="landing__intro__desc-first">unique sequencing & production</p>
-                            <h2 className="landing__intro__title">cloud management</h2>
-                            <p className="landing__intro__desc-second">This is our tech brand</p>
+                        <MainButton text="get started" url="about" />
+                    </div>
 
-                            <MainButton text="get started" url="about" />
-                        </div>
-
-                        <div className="landing__pic">
-                            <LazyLoadImage src={LandingImage} alt="Landing Cyber Background" draggable="false" effect="blur" />
-                        </div>
+                    <div className="landing__pic">
+                        <LazyLoadImage src={LandingImage} alt="Landing Cyber Background" draggable="false" effect="blur" />
                     </div>
                 </div>
-            </section>
-        </>
+            </div>
+        </section>
     )
 }
 

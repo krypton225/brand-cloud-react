@@ -7,6 +7,7 @@ import Support from "./components/support/Support";
 import Platforms from "./components/platforms/Platforms";
 import Pricing from "./components/pricing/Pricing";
 import Footer from "./components/footer/Footer";
+import GoToTop from "./components/go-to-top/GoToTop";
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
         <Route path="/platforms" element={<Platforms />} />
         <Route path="/pricing" element={<Pricing />} />
       </Routes>
+
+      <GoToTop />
 
       <Footer />
     </div>
