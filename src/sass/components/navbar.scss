@@ -45,12 +45,18 @@
             @include main-box-shadow;
             @include fade(hide);
             @include transition-ease-in(all, 0.4);
+            -webkit-transform: scale(0);
+            -ms-transform: scale(0);
             transform: scale(0);
+            -webkit-transform-origin: top right;
+            -ms-transform-origin: top right;
             transform-origin: top right;
             z-index: 99999;
 
             &.active {
                 @include fade(show);
+                -webkit-transform: scale(1);
+                -ms-transform: scale(1);
                 transform: scale(1);
             }
         }
@@ -87,7 +93,11 @@
                 position: absolute;
                 bottom: 0;
                 left: 0;
+                -webkit-transform: scale(0);
+                -ms-transform: scale(0);
                 transform: scale(0);
+                -webkit-transform-origin: top left;
+                -ms-transform-origin: top left;
                 transform-origin: top left;
                 @include coloring(dark-blue, bg);
                 @include transition-ease-in(transform, 0.2);
@@ -98,16 +108,26 @@
             }
 
             &:nth-child(even)::before {
+                -webkit-transform-origin: bottom right;
+                -ms-transform-origin: bottom right;
                 transform-origin: bottom right;
             }
 
             &:nth-child(even):hover:before {
+                -webkit-transform: scale(1);
+                -ms-transform: scale(1);
                 transform: scale(1);
+                -webkit-transform-origin: top left;
+                -ms-transform-origin: top left;
                 transform-origin: top left;
             }
 
             &:nth-child(odd):hover:before {
+                -webkit-transform: scale(1);
+                -ms-transform: scale(1);
                 transform: scale(1);
+                -webkit-transform-origin: bottom right;
+                -ms-transform-origin: bottom right;
                 transform-origin: bottom right;
             }
 
@@ -142,6 +162,8 @@
         display: none;
 
         @include breakpoint(tablet) {
+            display: -webkit-inline-box;
+            display: -ms-inline-flexbox;
             display: inline-flex;
         }
 
@@ -155,15 +177,21 @@
 
         &.active {
             span:nth-child(1) {
+                -webkit-transform: rotate(-45deg) translateY(1.1rem);
+                -ms-transform: rotate(-45deg) translateY(1.1rem);
                 transform: rotate(-45deg) translateY(1.1rem);
             }
 
             span:nth-child(2) {
                 @include fade(hide);
+                -webkit-transform: translateX(-0.5rem);
+                -ms-transform: translateX(-0.5rem);
                 transform: translateX(-0.5rem);
             }
 
             span:nth-child(3) {
+                -webkit-transform: rotate(45deg) translateY(-1.1rem);
+                -ms-transform: rotate(45deg) translateY(-1.1rem);
                 transform: rotate(45deg) translateY(-1.1rem);
             }
         }
