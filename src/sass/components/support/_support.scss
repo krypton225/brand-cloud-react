@@ -26,9 +26,11 @@
         height: 100%;
         @include grid-columns(1);
         place-items: center;
+        -ms-flex-line-pack: center;
         align-content: center;
 
         @include breakpoint(tablet) {
+            -ms-flex-line-pack: stretch;
             align-content: stretch;
         }
     }
@@ -121,6 +123,8 @@
                 text-align: start;
                 font-size: 1.3rem;
                 @include flex-center-row;
+                -webkit-box-pack: start;
+                -ms-flex-pack: start;
                 justify-content: flex-start;
                 @include coloring(light-blue, txt);
 
@@ -139,6 +143,8 @@
             }
 
             &:hover &__icon {
+                -webkit-transform: rotate(15deg) scale(1.1);
+                -ms-transform: rotate(15deg) scale(1.1);
                 transform: rotate(15deg) scale(1.1);
             }
         }
