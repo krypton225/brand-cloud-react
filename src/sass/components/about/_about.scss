@@ -9,9 +9,11 @@
         height: 100%;
         @include grid-columns(1);
         place-items: center;
+        -ms-flex-line-pack: center;
         align-content: center;
 
         @include breakpoint(tablet) {
+            -ms-flex-line-pack: stretch;
             align-content: stretch;
         }
     }
