@@ -20,9 +20,9 @@ const GoToTop = () => {
     window.addEventListener("scroll", handleWhenScroll);
 
     return (
-        <a className={`go-to-top ${goToTopBtn ? "active" : ""}`} id='go-to-top' onClick={handleTop}>
+        <button className={`go-to-top ${goToTopBtn ? "active" : ""}`} id='go-to-top' onClick={handleTop}>
             <FaArrowUp />
-        </a>
+        </button>
     )
 }
 
