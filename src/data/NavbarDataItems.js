@@ -4,8 +4,7 @@ const NavbarDataItems = [
     { linkText: "home", url: "/" },
     { linkText: "about", url: "/about" },
     { linkText: "support", url: "/support" },
-    { linkText: "platforms", url: "/platforms" },
-    { linkText: "pricing", url: "/pricing" },
+    { linkText: "platforms", url: "/platforms" }
 ];
 
 (() => {
