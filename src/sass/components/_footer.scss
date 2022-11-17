@@ -93,6 +93,26 @@
                     border-radius: var(--custom-border-radius);
                     caret-color: map-get($colors, "green-light");
 
+                    &::-webkit-input-placeholder {
+                        text-transform: capitalize;
+                        color: rgb(177, 177, 177);
+                    }
+
+                    &::-moz-placeholder {
+                        text-transform: capitalize;
+                        color: rgb(177, 177, 177);
+                    }
+
+                    &:-ms-input-placeholder {
+                        text-transform: capitalize;
+                        color: rgb(177, 177, 177);
+                    }
+
+                    &::-ms-input-placeholder {
+                        text-transform: capitalize;
+                        color: rgb(177, 177, 177);
+                    }
+
                     &::placeholder {
                         text-transform: capitalize;
                         color: rgb(177, 177, 177);
