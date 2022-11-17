@@ -1,13 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 
-import Navbar from "./components/navbar/Navbar";
-import Landing from "./components/landing/Landing";
-import About from "./components/about/About";
-import Support from "./components/support/Support";
-import Platforms from "./components/platforms/Platforms";
-import Pricing from "./components/pricing/Pricing";
-import Footer from "./components/footer/Footer";
-import GoToTop from "./components/go-to-top/GoToTop";
+import { Navbar, Landing, About, Support, Platforms, Pricing, Footer, GoToTop } from "./utils/importer";
 
 function App() {
   return (

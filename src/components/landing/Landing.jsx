@@ -9,7 +9,6 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 import LandingImage from "../../assets/images/cyber-bg.png";
 
 import MainButton from "../button/MainButton";
-import GoToTop from "../go-to-top/GoToTop";
 
 const Landing = () => {
 
@@ -40,4 +39,4 @@ const Landing = () => {
     )
 }
 
-export default Landing
+export default Landing;
